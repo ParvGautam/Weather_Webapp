@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weatherio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fas fa-cloud"></i>
+            <span>weatherio</span>
+        </div>
+        <div class="search-container">
+            <i class="fas fa-search search-icon"></i>
+            <input type="text" id="city" placeholder="Search city..." value="london">
+        </div>
+        <button class="location-btn">
+            <i class="fas fa-location-crosshairs"></i>
+            Current Location
+        </button>
+        <button class="theme-toggle">
+            <i class="fas fa-moon"></i>
+            <span class="theme-text">Dark Mode</span>
+        </button>
+    </nav>
+
+    <div class="container">
+        <!-- Left Sidebar -->
+        <div class="sidebar">
+            <div class="current-weather">
+                <h2>Now</h2>
+                <div class="temp-display">
+                    <span class="temperature">5</span>
+                    <span class="unit">°C</span>
+                </div>
+                <p class="weather-condition">Broken Clouds</p>
+                <div class="date-location">
+                    <p class="current-date">Wednesday 1, Mar</p>
+                    <p class="location">London, GB</p>
+                </div>
+            </div>
+
+            <div class="forecast-days">
+                <h3>5 Days Forecast</h3>
+                <div class="forecast-list">
+                    <!-- Forecast items will be added by JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <section class="highlights">
+                <h2>Today's Highlights</h2>
+                
+                <!-- Air Quality Index -->
+                <div class="highlight-card aqi-card">
+                    <h3>Air Quality Index <span class="aqi-badge">Good</span></h3>
+                    <div class="aqi-grid">
+                        <div class="aqi-item">
+                            <span class="aqi-label">PM2.5</span>
+                            <span class="aqi-value">3.90</span>
+                        </div>
+                        <div class="aqi-item">
+                            <span class="aqi-label">SO2</span>
+                            <span class="aqi-value">7.75</span>
+                        </div>
+                        <div class="aqi-item">
+                            <span class="aqi-label">NO2</span>
+                            <span class="aqi-value">33.6</span>
+                        </div>
+                        <div class="aqi-item">
+                            <span class="aqi-label">O3</span>
+                            <span class="aqi-value">38.6</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sunrise & Sunset -->
+                <div class="highlight-card">
+                    <h3>Sunrise & Sunset</h3>
+                    <div class="sun-times">
+                        <div class="sunrise">
+                            <img src="https://img.icons8.com/color/48/000000/sunrise.png" alt="Sunrise">
+                            <span class="time">6:46 AM</span>
+                        </div>
+                        <div class="sunset">
+                            <img src="https://img.icons8.com/color/48/000000/moon.png" alt="Sunset">
+                            <span class="time">5:39 PM</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Other Highlights -->
+                <div class="highlight-card">
+                    <h3>Humidity</h3>
+                    <div class="highlight-value">
+                        <img src="https://img.icons8.com/color/48/000000/hygrometer.png" alt="Humidity">
+                        <span>82%</span>
+                    </div>
+                </div>
+
+                <div class="highlight-card">
+                    <h3>Pressure</h3>
+                    <div class="highlight-value">
+                        <img src="https://img.icons8.com/color/48/000000/atmospheric-pressure.png" alt="Pressure">
+                        <span>1025hPa</span>
+                    </div>
+                </div>
+
+                <div class="highlight-card">
+                    <h3>Visibility</h3>
+                    <div class="highlight-value">
+                        <img src="https://img.icons8.com/color/48/000000/visible.png" alt="Visibility">
+                        <span>10km</span>
+                    </div>
+                </div>
+
+                <div class="highlight-card">
+                    <h3>Feels Like</h3>
+                    <div class="highlight-value">
+                        <img src="https://img.icons8.com/color/48/000000/thermometer.png" alt="Feels Like">
+                        <span>2°C</span>
+                    </div>
+                </div>
+
+                <div class="highlight-card">
+                    <h3>Wind Speed</h3>
+                    <div class="highlight-value">
+                        <img src="https://img.icons8.com/color/48/000000/wind.png" alt="Wind Speed">
+                        <span>5.5 m/s</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="hourly-forecast">
+                <h2>Today at</h2>
+                <div class="hourly-list">
+                    <!-- Hourly forecast items will be added by JavaScript -->
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <div class="watermark">Created by Parv Gautam</div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
